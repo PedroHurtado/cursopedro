@@ -1,0 +1,15 @@
+Frontend
+    html+css+js(react,angular,vue,lit-elemet(webcomponents),svelte,solidjs)
+    android
+    ios
+
+Backend
+    spring boot(java)
+    django  (python)
+    flask   (python)
+    express (node-js)
+    .net core(c#)
+
+html-marcado
+css-diseño
+js-interacion

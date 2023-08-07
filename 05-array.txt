@@ -1,0 +1,29 @@
+Array
+
+debilmente tipado
+[1,"Hola", True]
+
+fuertemente tipado
+[1,2,3,4,5]
+
+base0
+
+a = [1,2,3]
+filter a.filter(v=>v%2===0) [2]
+find   a.find(v=>v%2==0) 2
+sort  
+//Controlar map y reduce=== rey
+map a.map(v=>v*v)   [1,4,9]
+reduce  
+    a.reduce((a,v)=>a+v) 6 //sum
+    0+1=1
+    1+2=3
+    3+3=6
+
+    a.reduce((a,v)=>a+=1,0)     //3
+    a.reduce((a,v)=>Math.min(a,v)) //1
+    a.reduce((a,v)=>Math.max(a,v)) //3
+
+//Map->Hasmap
+//Set->HasSet
+

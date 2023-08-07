@@ -1,0 +1,29 @@
+Aprender los tipos de datos primitivos
+
+    Number
+    String
+    Boolean
+
+1. Debilmente tipados
+    Pyton, Javascript
+    inferencia de tipos
+    https://es.wikipedia.org/wiki/Inferencia
+
+    a=1
+2. Fuertemente tipados
+    c,c++,java,c#,rust
+
+    int a=1
+    a=1.1
+
+    c#,java->var
+    c++->auto
+
+    var a=1
+    auto a=1
+    
+    var a =null
+
+
+    a="Hello"
+3. Null

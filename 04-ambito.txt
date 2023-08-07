@@ -1,0 +1,26 @@
+def fun(a):
+    b=3
+    print(a)
+
+fum(5) //argumentos y variables
+
+var x=11 //nunca debes de utilizar
+function foo(){
+    console.log(x)
+    let x=10
+}
+
+foo()
+
+class Bar:
+    pass
+def foo():
+    bar = Bar()
+    print(bar)
+
+foo()
+
+def foo():
+    return Bar()
+
+result = foo()

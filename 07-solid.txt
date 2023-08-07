@@ -1,0 +1,186 @@
+
+--violación S+D
+
+function printDate(){
+   console.log(new Date())
+}
+//test imposible de realizar
+
+//no viloación de S+D
+function printDate(date,writer){
+    writer(date)
+}
+
+//test
+date = new Date()
+printDate(date,_date=>console.log(_date===date))
+
+¿Crear una cuenta que al crearse su saldo es 0. Permite hacer abonos que sumaran al saldo
+y reintegros que restaran del saldo. No puedo hacer reintegros si su saldo es menor que cero
+
+class Cuenta{
+    #saldo =0
+    get saldo(){
+        return this.#saldo
+    }
+    abono(importe){
+        this.#saldo +=importe
+    }    
+    reintegro(importe){
+        if(this.#saldo-importe<0)
+            throw "Saldo insuficiente"
+        this.#saldo -=importe
+    }
+}
+
+function test_create_cuenta(){
+    cuenta = new Cuenta()
+    console.log(cuenta.saldo === 0)
+}
+
+function  test_abono_100_saldo_100(){
+    cuenta = new Cuenta()
+    cuenta.abono(100)
+    console.log(cuenta.saldo===100)
+}
+function test_reintegro_100_cuenta_saldo_100_saldo_0(){
+    cuenta = new Cuenta()
+    cuenta.abono(100)
+    cuenta.reintegro(100)
+    console.log(cuenta.saldo===0)
+}
+
+function test_reintegro_100_saldo_0_error(){
+    cuenta = new Cuenta()    
+    try{
+        cuenta.reintegro(100)
+    }        
+    catch(err){
+        console.log(err==="Saldo insuficiente")
+    }
+    
+    
+}
+test_create_cuenta()
+test_abono_100_saldo_100()
+test_reintegro_100_cuenta_saldo_100_saldo_0()
+test_reintegro_100_saldo_0_error()
+
+//https://github.com/PedroHurtado/curso-unit-testing-junit
+//https://www.carlosble.com/libro-tdd/?lang=es
+//https://blog.koalite.com/
+
+TDD+Agile
+
+
+En el sistema se pueden crear,modificar,eliminar y leer clientes. Los usuarios solo se 
+pueden leer
+
+
+class Base{
+    add(){}
+    update(){}
+    remove(){}
+    get(){}
+}
+
+class Customer extends Base{
+
+}
+
+class User extends Base(){
+    update(){throw "Not implement"}
+    remove(){throw "Not implement"}
+    add(){throw "Not implement"}
+}
+
+class Add:
+    def add():
+        pass
+class Update:
+    def update():
+        pass
+
+class Remove:
+    def update():
+        pass
+
+class Get:
+    def get():
+        pass
+
+
+class Customer(Add,Update,Remove,Get):
+    pass
+class User(Get):
+    pass
+
+
+const add = Base => class extends Base{
+    add(){}
+}
+const update = Base => class extends Base{
+    update(){}
+}
+const remove = Base => class extends Base{
+    remove(){}
+}
+const get = Base => class extends Base{
+    get(){}
+}
+
+class Customer extends add(update(remove(get(class{})))){
+
+}
+
+class Customer extends inherit().withMixins(add,update,remove,get){
+
+}
+
+
+class Mixin{
+    constructor(Base){
+        this.Base = Base;
+    }
+    withMixins(...args){
+        return args.reduce((a,m)=>m(a), this.Base)
+
+        //Object+Base
+        //Object+Bae+add
+        //Object+Bae+add+update
+        //Object+Bae+add+update+remove
+        //Object+Bae+add+update+remove+get
+    }
+}
+
+function inherit(Base){
+    return new Mixin(Base || class {})
+}
+
+
+En el mundo de las aves existen pinguinos que pesan 10 kg y aguilas
+que vuelan a 100 km/hora y pesan 15 kg
+
+//Abstract
+class Ave:
+    def __init__(self,peso)
+        self._peso = peso
+class AveVoladora(Ave)
+    def __init__(self,peso,velocidad):
+        super().__init(peso)
+        self._velocidad = velocidad
+class Aguila(AveVoladora):
+    def __init__(self,peso,velocidad):
+        super().__init(peso,velocidad)
+
+class Pinguino(Ave):
+    def __init__(self,peso):
+        super().__init(peso)
+class Paloma(AveVoladora):
+    def __init__(self,peso,velocidad):
+        super().__init(peso,velocidad)
+
+printAve(Aguila())
+printAve(Pinguino())
+
+printAveVoladora(Pinguino()) #error

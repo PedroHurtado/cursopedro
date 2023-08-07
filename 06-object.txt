@@ -1,0 +1,35 @@
+1. Estado(attributos)
+2. Metodos escritura-lectura
+3. principio de encapsulacion
+
+class Person(object):
+    
+    def __init__(self,color):
+        self._color = color
+
+    def get_color(self):
+        return self._color
+    def set_color(self,color):
+        self._color = color
+
+    def __del__(self):
+        pass
+    def write():
+        pass
+    
+
+person = Person("marron")
+person.get_color()
+person._color = "azul"
+person.write() #error
+Person.write() #static
+
+convencion de nombres
+
+https://en.wikipedia.org/wiki/Naming_convention_(programming)
+
+private
+public
+protected(public para los herederederos, private para la instancia)
+
+instancia y this|self

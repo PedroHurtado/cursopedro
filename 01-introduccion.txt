@@ -1,0 +1,11 @@
+1. Aprender un lenguaje
+2. Clasificacion de un lenguaje
+3. Memoria
+
+4. Buenas Practicas
+    4.1 Solid
+    4.2 Patrones de diseño
+5. STL(Standard library)
+    Date
+    String
+    Çollectiones
