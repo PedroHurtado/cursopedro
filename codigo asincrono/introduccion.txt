@@ -1,0 +1,27 @@
+1. Asincrono
+    Tiempo
+    Ok-error
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+
+XmlHttpRequest->tendencia a ser obsoleta
+
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+
+Fetch
+
+https://developer.mozilla.org/es/docs/Web/API/Fetch_API
+
+https://www.w3.org/TR/2020/SPSD-cors-20200602/
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
+//Exceptions
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/try...catch
